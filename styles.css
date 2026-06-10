@@ -1,0 +1,275 @@
+:root {
+  --text: #202124;
+  --muted: #5f6368;
+  --line: #dadce0;
+  --footer-bg: #f2f2f2;
+  --google-blue: #4285f4;
+  --google-red: #db4437;
+  --google-yellow: #f4b400;
+  --google-green: #0f9d58;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  font: 14px/1.4 Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 14px 24px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.apps-button {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 4px);
+  gap: 3px;
+  place-content: center;
+}
+
+.apps-button span {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #5f6368;
+}
+
+.apps-button:hover,
+.hamburger-wrap summary:hover {
+  background: #f0f0f0;
+  text-decoration: none;
+}
+
+.signin {
+  padding: 9px 23px;
+  background: #1a73e8;
+  color: #fff !important;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.signin:hover {
+  text-decoration: none !important;
+  background: #1557b0;
+}
+
+.hamburger-wrap {
+  display: none;
+}
+
+.hamburger-wrap summary {
+  list-style: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  gap: 3px;
+}
+
+.hamburger-wrap summary::-webkit-details-marker {
+  display: none;
+}
+
+.hamburger-wrap summary span {
+  width: 16px;
+  height: 2px;
+  background: #5f6368;
+}
+
+.menu-panel {
+  position: absolute;
+  top: 44px;
+  right: 0;
+  width: 210px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  background: #fff;
+  padding: 8px;
+  display: grid;
+  gap: 4px;
+  z-index: 5;
+}
+
+.menu-panel a {
+  padding: 9px 12px;
+  border-radius: 6px;
+}
+
+.menu-panel a:hover {
+  background: #f1f3f4;
+  text-decoration: none;
+}
+
+main {
+  flex: 1;
+  display: grid;
+  place-content: center;
+  gap: 22px;
+  padding: 20px;
+}
+
+.logo {
+  margin: 0;
+  font-size: clamp(64px, 11vw, 92px);
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: -4px;
+}
+
+.logo .b { color: var(--google-blue); }
+.logo .r { color: var(--google-red); }
+.logo .y { color: var(--google-yellow); }
+.logo .g { color: var(--google-green); }
+
+.search-area {
+  width: min(92vw, 584px);
+  display: grid;
+  gap: 28px;
+}
+
+.search-shell {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0 14px;
+  min-height: 46px;
+}
+
+.search-shell:hover,
+.search-shell:focus-within {
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  border-color: transparent;
+}
+
+.search-shell input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  min-width: 0;
+  color: var(--text);
+}
+
+.search-icon,
+.mic-icon {
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.actions button {
+  border: 1px solid #f8f9fa;
+  background: #f8f9fa;
+  color: #3c4043;
+  font-size: 14px;
+  padding: 0 16px;
+  min-height: 36px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  border-color: var(--line);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  background: var(--footer-bg);
+  color: var(--muted);
+}
+
+.region,
+.footer-links {
+  border-top: 1px solid #dadce0;
+  padding: 14px 30px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 860px) {
+  .apps-button,
+  .signin {
+    display: none;
+  }
+
+  .hamburger-wrap {
+    display: block;
+  }
+}
+
+@media (max-width: 720px) {
+  .top-nav {
+    padding: 12px 16px;
+  }
+
+  .footer-links,
+  .region {
+    justify-content: center;
+    text-align: center;
+    padding: 12px 18px;
+  }
+
+  .footer-links div {
+    justify-content: center;
+    gap: 14px;
+  }
+}
