@@ -25,7 +25,7 @@
 
 <h2>🧩 Project Structure</h2>
 
-<pre><code>/home/runner/work/elevup-day1/elevup-day1/AlvinJoby/elevup-day1
+<pre><code>.
 ├── index.html
 ├── styles.css
 └── README.md
