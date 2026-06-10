@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google</title>
+  <link rel="icon" href="https://www.google.com/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <button class="icon-button mobile-menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M4 7h16M4 12h16M4 17h16"></path>
+      </svg>
+    </button>
+
+    <nav class="desktop-nav" aria-label="Google links">
+      <a href="https://mail.google.com/">Gmail</a>
+      <a href="https://www.google.com/imghp">Images</a>
+      <button class="icon-button apps-toggle" type="button" aria-label="Google apps" aria-haspopup="true" aria-expanded="false" aria-controls="apps-panel">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="5" cy="5" r="1.7"></circle>
+          <circle cx="12" cy="5" r="1.7"></circle>
+          <circle cx="19" cy="5" r="1.7"></circle>
+          <circle cx="5" cy="12" r="1.7"></circle>
+          <circle cx="12" cy="12" r="1.7"></circle>
+          <circle cx="19" cy="12" r="1.7"></circle>
+          <circle cx="5" cy="19" r="1.7"></circle>
+          <circle cx="12" cy="19" r="1.7"></circle>
+          <circle cx="19" cy="19" r="1.7"></circle>
+        </svg>
+      </button>
+      <a class="signin" href="https://accounts.google.com/">Sign in</a>
+    </nav>
+  </header>
+
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile navigation" hidden>
+    <button class="drawer-backdrop" type="button" data-close-drawer aria-label="Close menu"></button>
+    <div class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="mobile-drawer-title">
+      <div class="drawer-header">
+        <h2 id="mobile-drawer-title">Google</h2>
+        <button class="icon-button drawer-close" type="button" aria-label="Close menu" data-close-drawer>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M6 6l12 12M18 6L6 18"></path>
+          </svg>
+        </button>
+      </div>
+      <nav class="drawer-links" aria-label="Mobile navigation">
+        <a href="https://www.google.com/">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M4 11.5 12 5l8 6.5v7.5a1 1 0 0 1-1 1h-4.5v-6h-5v6H5a1 1 0 0 1-1-1v-7.5z"></path>
+          </svg>
+          <span>Home</span>
+        </a>
+        <a href="https://www.google.com/saved">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M6 4h12a1 1 0 0 1 1 1v15l-7-3.5L5 20V5a1 1 0 0 1 1-1z"></path>
+          </svg>
+          <span>Saved</span>
+        </a>
+        <a href="https://www.google.com/preferences">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm8.5 3.5-.9-.5.1-1a7.7 7.7 0 0 0-.4-1l.7-.8-1.8-1.8-.8.7a7.7 7.7 0 0 0-1-.4l-.5-.9h-2.5l-.5.9a7.7 7.7 0 0 0-1 .4l-.8-.7-1.8 1.8.7.8a7.7 7.7 0 0 0-.4 1l.1 1-.9.5v2.5l.9.5-.1 1a7.7 7.7 0 0 0 .4 1l-.7.8 1.8 1.8.8-.7a7.7 7.7 0 0 0 1 .4l.5.9h2.5l.5-.9a7.7 7.7 0 0 0 1-.4l.8.7 1.8-1.8-.7-.8a7.7 7.7 0 0 0 .4-1l-.1-1 .9-.5V12z"></path>
+          </svg>
+          <span>Settings</span>
+        </a>
+        <a href="https://support.google.com/websearch/?p=help_home">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M11 18h2v2h-2zm1-14a5.5 5.5 0 0 0-5.5 5.5h2A3.5 3.5 0 1 1 12 13a2.5 2.5 0 0 0-2.5 2.5V16h2v-.5a.5.5 0 0 1 .5-.5 5.5 5.5 0 0 0 0-11z"></path>
+          </svg>
+          <span>Help</span>
+        </a>
+      </nav>
+    </div>
+  </aside>
+
+  <div class="apps-layer" id="apps-layer" hidden>
+    <button class="apps-backdrop" type="button" data-close-apps aria-label="Close apps menu"></button>
+    <section class="apps-panel" id="apps-panel" aria-label="Google apps">
+      <div class="apps-grid">
+        <a class="app-tile" href="https://mail.google.com/">
+          <span class="app-icon gmail" aria-hidden="true">
+            <svg viewBox="0 0 48 48" focusable="false" aria-hidden="true">
+              <path fill="#EA4335" d="M6 14.5v19c0 2.5 2 4.5 4.5 4.5h27c2.5 0 4.5-2 4.5-4.5v-19l-18 10.5L6 14.5z"></path>
+              <path fill="#4285F4" d="M42 14.5v19c0 2.5-2 4.5-4.5 4.5h-27C8 38 6 36 6 33.5v-19l18 10.5L42 14.5z"></path>
+              <path fill="#FBBC04" d="M6 14.5 24 25l18-10.5c-.6-2.1-2.5-3.5-4.7-3.5H10.7C8.5 11 6.6 12.4 6 14.5z"></path>
+            </svg>
+          </span>
+          <span class="app-label">Gmail</span>
+        </a>
+
+        <a class="app-tile" href="https://maps.google.com/">
+          <span class="app-icon maps" aria-hidden="true">
+            <svg viewBox="0 0 48 48" focusable="false" aria-hidden="true">
+              <path fill="#1A73E8" d="M24 7c-6.1 0-11 4.9-11 11 0 8.2 11 23 11 23s11-14.8 11-23c0-6.1-4.9-11-11-11z"></path>
+              <circle cx="24" cy="18" r="4.5" fill="#fff"></circle>
+              <circle cx="24" cy="18" r="2.6" fill="#1A73E8"></circle>
+            </svg>
+          </span>
+          <span class="app-label">Maps</span>
+        </a>
+
+        <a class="app-tile" href="https://www.youtube.com/">
+          <span class="app-icon youtube" aria-hidden="true">
+            <svg viewBox="0 0 48 48" focusable="false" aria-hidden="true">
+              <rect x="8" y="13" width="32" height="22" rx="6" fill="#FF0000"></rect>
+              <path d="M21 17.5v13l11-6.5-11-6.5z" fill="#fff"></path>
+            </svg>
+          </span>
+          <span class="app-label">YouTube</span>
+        </a>
+
+        <a class="app-tile" href="https://drive.google.com/">
+          <span class="app-icon drive" aria-hidden="true">
+            <svg viewBox="0 0 48 48" focusable="false" aria-hidden="true">
+              <path d="M19 8h10l11 19-5 8H15l-5-8 9-19z" fill="#34A853"></path>
+              <path d="M29 8H19l9 19h11L29 8z" fill="#FBBC04"></path>
+              <path d="M14 35h18l5-8H19l-5 8z" fill="#4285F4"></path>
+            </svg>
+          </span>
+          <span class="app-label">Drive</span>
+        </a>
+
+        <a class="app-tile" href="https://calendar.google.com/">
+          <span class="app-icon calendar" aria-hidden="true">
+            <svg viewBox="0 0 48 48" focusable="false" aria-hidden="true">
+              <rect x="10" y="9" width="28" height="30" rx="5" fill="#fff" stroke="#DADCE0"></rect>
+              <rect x="10" y="14" width="28" height="8" fill="#1A73E8"></rect>
+              <rect x="14" y="6" width="4" height="8" rx="2" fill="#1A73E8"></rect>
+              <rect x="30" y="6" width="4" height="8" rx="2" fill="#1A73E8"></rect>
+            </svg>
+          </span>
+          <span class="app-label">Calendar</span>
+        </a>
+
+        <a class="app-tile" href="https://photos.google.com/">
+          <span class="app-icon photos" aria-hidden="true">
+            <svg viewBox="0 0 48 48" focusable="false" aria-hidden="true">
+              <path fill="#4285F4" d="M24 24h11.5A11.5 11.5 0 0 0 24 12.5V24z"></path>
+              <path fill="#34A853" d="M24 24v11.5A11.5 11.5 0 0 0 35.5 24H24z"></path>
+              <path fill="#FBBC04" d="M24 24H12.5A11.5 11.5 0 0 0 24 35.5V24z"></path>
+              <path fill="#EA4335" d="M24 24V12.5A11.5 11.5 0 0 0 12.5 24H24z"></path>
+              <circle cx="24" cy="24" r="6.2" fill="#fff"></circle>
+            </svg>
+          </span>
+          <span class="app-label">Photos</span>
+        </a>
+
+        <a class="app-tile" href="https://translate.google.com/">
+          <span class="app-icon translate" aria-hidden="true">
+            <svg viewBox="0 0 48 48" focusable="false" aria-hidden="true">
+              <rect x="9" y="10" width="14" height="28" rx="3" fill="#fff" stroke="#DADCE0"></rect>
+              <path d="M14 18h8M17 15v6M20.5 21c-.8 3.1-2.3 5.5-4.5 7.2" stroke="#1A73E8" stroke-width="2" stroke-linecap="round" fill="none"></path>
+              <path d="M26 32l7-16 7 16M28.3 27.5h9.4" stroke="#34A853" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+            </svg>
+          </span>
+          <span class="app-label">Translate</span>
+        </a>
+
+        <a class="app-tile" href="https://news.google.com/">
+          <span class="app-icon news" aria-hidden="true">
+            <svg viewBox="0 0 48 48" focusable="false" aria-hidden="true">
+              <rect x="9" y="11" width="30" height="26" rx="4" fill="#fff" stroke="#DADCE0"></rect>
+              <rect x="14" y="16" width="14" height="3" rx="1.5" fill="#1A73E8"></rect>
+              <rect x="14" y="22" width="20" height="2.5" rx="1.2" fill="#BDC1C6"></rect>
+              <rect x="14" y="27" width="20" height="2.5" rx="1.2" fill="#BDC1C6"></rect>
+            </svg>
+          </span>
+          <span class="app-label">News</span>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <main class="hero">
+    <h1 class="brand">
+      <img
+        class="brand-logo"
+        src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+        srcset="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png 2x"
+        alt="Google"
+        width="272"
+        height="92"
+      />
+    </h1>
+
+    <form class="search-form" action="https://www.google.com/search" method="get" role="search">
+      <label class="search-bar" for="search-input">
+        <span class="search-leading-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+            <path d="M15.5 14h-.79l-.28-.27a6.48 6.48 0 0 0 1.48-5.34C15.38 5.01 12.37 2 8.68 2S2 5.01 2 8.39s3.01 6.39 6.68 6.39c1.61 0 3.1-.59 4.24-1.56l.27.28v.79L19 20.49 20.49 19l-4.99-5z"></path>
+          </svg>
+        </span>
+        <input id="search-input" name="q" type="search" aria-label="Search" autocomplete="off" autocapitalize="off" spellcheck="false" />
+        <a class="search-action" href="https://lens.google.com/" aria-label="Search by image">
+          <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+            <path d="M12 7.25a4.75 4.75 0 1 0 0 9.5 4.75 4.75 0 0 0 0-9.5zm0 7.75a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"></path>
+            <path d="M7 5.5h-1.2a1.3 1.3 0 0 0-1.3 1.3V8"></path>
+            <path d="M17 5.5h1.2a1.3 1.3 0 0 1 1.3 1.3V8"></path>
+            <path d="M7 18.5h-1.2a1.3 1.3 0 0 1-1.3-1.3V16"></path>
+            <path d="M17 18.5h1.2a1.3 1.3 0 0 0 1.3-1.3V16"></path>
+          </svg>
+        </a>
+        <button class="search-action" type="button" aria-label="Voice search">
+          <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+            <path d="M12 14.75a2.75 2.75 0 0 0 2.75-2.75V6a2.75 2.75 0 1 0-5.5 0v6A2.75 2.75 0 0 0 12 14.75z"></path>
+            <path d="M7.5 11.8a4.5 4.5 0 0 0 9 0"></path>
+            <path d="M12 16v3"></path>
+          </svg>
+        </button>
+      </label>
+
+      <div class="search-actions-row">
+        <button type="submit">Google Search</button>
+        <button type="submit" name="btnI" value="1">I'm Feeling Lucky</button>
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-region">India</div>
+    <div class="footer-links">
+      <div class="footer-group">
+        <a href="https://about.google/">About</a>
+        <a href="https://ads.google.com/">Advertising</a>
+        <a href="https://www.google.com/business/">Business</a>
+        <a href="https://www.google.com/search/howsearchworks/">How Search works</a>
+      </div>
+      <div class="footer-group">
+        <a href="https://policies.google.com/privacy">Privacy</a>
+        <a href="https://policies.google.com/terms">Terms</a>
+        <a href="https://www.google.com/preferences">Settings</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
